@@ -78,9 +78,12 @@ function drawSeats() {
 function addListener() {
   let icons = document.querySelectorAll('tbody i');
   for (let icon of icons) {
-    icon.addEventListener('click', checkStatus)
+    icon.addEventListener('click', selectSeat)
   }
 }
-function checkStatus() {
-
+function selectSeat(e) {
+  if (e.target.classList.contains('available')) {
+    e.target.classList.remove('available');
+    e.target.classList.add('selected');
+  }
 }
