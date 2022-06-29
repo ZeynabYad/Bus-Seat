@@ -68,7 +68,8 @@ function drawSeats() {
     }' class="fa-solid fa-square ${row.seats[1].seatState}" ></i></span>
        <span class="list-inline-item"><i id='${row.seats[2].seatNumber + row.rowNumber * 3
     }' class="fa-solid fa-square ${row.seats[2].seatState}"></i></span>
-  </td>
+  </td> 
+
 </tr>`);
 
   document.querySelector('tbody').innerHTML = result.join('');
@@ -80,10 +81,16 @@ function addListener() {
   for (let icon of icons) {
     icon.addEventListener('click', selectSeat)
   }
+  let clearBtn=document.querySelector('button');
+  clearBtn.addEventListener('click',clearSelection)
 }
 function selectSeat(e) {
   if (e.target.classList.contains('available')) {
     e.target.classList.remove('available');
     e.target.classList.add('selected');
   }
+}
+
+function clearSelection(){
+  drawSeats();
 }
