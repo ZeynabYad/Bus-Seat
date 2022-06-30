@@ -1,0 +1,23 @@
+i{
+    font-size: 40px;
+    color: #b2b2b2;
+}
+.reserved{
+    color: gold;
+    cursor:cursor;
+}
+.available{
+    color: #b2b2b2;
+}
+
+.selected{
+    color: green;
+}
+button,button:focus{
+    box-shadow:none !important;
+}
+
+textarea{
+    height: 100px;
+   
+}
