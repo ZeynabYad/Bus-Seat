@@ -88,6 +88,9 @@ function selectSeat(e) {
   if (e.target.classList.contains('available')) {
     e.target.classList.remove('available');
     e.target.classList.add('selected');
+    let selectedSeat = e.target.id;
+    document.querySelector('#showSelectSeats textarea').innerHTML+=
+    ` ${selectedSeat},`;
   }
 }
 
