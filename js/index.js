@@ -96,4 +96,5 @@ function selectSeat(e) {
 
 function clearSelection(){
   drawSeats();
+  document.querySelector('#showSelectSeats textarea').innerHTML=``;
 }
