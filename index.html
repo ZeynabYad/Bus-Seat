@@ -17,7 +17,7 @@
     <div class="contianer">
         <div class="row justify-content-center align-items-center">
             <div class="col-3">
-                <table class="table table-bordered text-center">
+                <table class="table text-center">
                     <thead>
                         <tr>
                             <th><i class="fa-solid fa-circle-notch"></i></th>
@@ -30,14 +30,16 @@
                 </table>
             </div>
             <div class="col-3">
-                <ul>
-                    <li>Available</li>
-                    <li>Selected</li>
-                    <li>Booked</li>
-                    <li><button class="btn btn-secondary btn-sm">Clear Selection</button></li>
+                <ul id="guide" class="list-unstyled fa-ul">
+                    <li ><span class="fa-li"><i class="fa-solid fa-square fa-1x"></span></i>Available</li>
+                    <li ><span class="fa-li"><i class="fa-solid fa-square fa-1x selected"></span></i>Selected</li>
+                    <li ><span class="fa-li"><i class="fa-solid fa-square fa-1x reserved"></span></i>Booked</li>
+                    
                 </ul>
+                <button class="btn btn-secondary btn-sm mb-3">Clear Selection</button>
                 <div id="showSelectSeats">
-                    <p></p>
+                    <span class="fw-bold text-success">Seats selected:</span>
+                    <textarea class="form-control fw-bold mt-2"></textarea>
                 </div>
             </div>
         </div>
